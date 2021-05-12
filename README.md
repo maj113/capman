@@ -18,7 +18,7 @@ Run the following (it's safe, I swear, but please read scripts before
 running them):
 
 ```sh
-curl -Ls https://raw.githubusercontent.com/wwwiiilll/capman/master/install.sh | bash
+curl -Ls https://raw.githubusercontent.com/maj113/capman/master/install.sh | bash
 ```
 
 Usage
