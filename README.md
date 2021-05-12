@@ -1,4 +1,4 @@
-Capman - made by @willtrnr, fixed, *kinda* by me
+Capman - made by @willtrnr, fixed *kinda* by me
 ======
 
 Use ArchLinux's Pacman package manager to manage packages on Chrome OS.
