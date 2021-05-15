@@ -22,6 +22,9 @@ PACMAN_VER='5.1.3-1'
 MIRRORS_VER='20181205-1'
 KEYRING_VER='20190221-1'
 
+cp /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1.backup #just in case
+ln -s /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.0.0
+
 SUDO="/usr/bin/sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
 PACMAN="$SUDO /usr/local/bin/pacman --noconfirm"
 
