@@ -22,9 +22,6 @@ PACMAN_VER='5.1.3-1'
 MIRRORS_VER='20181205-1'
 KEYRING_VER='20190221-1'
 
-cp /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1.backup #just in case
-ln -s /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.0.0
-
 SUDO="/usr/bin/sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
 PACMAN="$SUDO /usr/local/bin/pacman --noconfirm"
 
@@ -95,7 +92,20 @@ install_pkg "pacman-$PACMAN_VER-$ARCH"
 install_pkg "capman-keyring-$KEYRING_VER-any"
 install_pkg "pacman-mirrorlist-$MIRRORS_VER-any"
 
+if [[ -L "/usr/lib64/libcrypto.so.1.0.0" && -e "/usr/lib64/libcrypto.so.1.0.0" ]]; then
+  echo "It's a link!"
+else
+  echo "Might be a link, but it doesn't exist!"
+  cp /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1.backup #just in case
+  ln -s /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.0.0
+fi
+
+
+cp /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1.backup #just in case
+ln -s /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.0.0
+
 msg 'Initializing the keyring...'
+
 $SUDO /usr/local/bin/pacman-key --init
 $SUDO /usr/local/bin/pacman-key --populate capman
 
