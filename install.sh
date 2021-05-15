@@ -92,7 +92,7 @@ install_pkg "pacman-$PACMAN_VER-$ARCH"
 install_pkg "capman-keyring-$KEYRING_VER-any"
 install_pkg "pacman-mirrorlist-$MIRRORS_VER-any"
 
-if [[ -L "/usr/lib64/libcrypto.so.1.0.0" && -e "/usr/lib64/libcrypto.so.1.0.0" ]]; then
+if [[ -L /usr/lib64/libcrypto.so.1.0.0 && -e /usr/lib64/libcrypto.so.1.0.0 ]]; then
   echo "It's a link!"
 else
   echo "Might be a link, but it doesn't exist!"
