@@ -100,10 +100,6 @@ else
   ln -s /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.0.0
 fi
 
-
-cp /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1.backup #just in case
-ln -s /usr/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.0.0
-
 msg 'Initializing the keyring...'
 
 $SUDO /usr/local/bin/pacman-key --init
