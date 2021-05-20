@@ -1,5 +1,9 @@
-Capman - made by @willtrnr, fixed *kinda* by me
-======
+Capman - made by @willtrnr, fixed *kinda* by me !WIP!
+=====
+
+**!!!DOES NOT WORK!!!**
+
+**(it breaks bash completely, do not use unless you want to have a dead shell, I AM NOT RESPONSIBLE FOR ANY DAMAGE THIS DOES!!!)**
 
 Use ArchLinux's Pacman package manager to manage packages on Chrome OS.
 
