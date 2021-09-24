@@ -1,6 +1,8 @@
 Capman - made by @willtrnr, fixed *kinda* by me !WIP!
 =====
 
+ARCHIVED/NO LONGER MAINTAINED due to having no time for this and no longer being interested in the project
+
 **!!!DOES NOT WORK!!!**
 
 **(it breaks bash completely, do not use unless you want to have a dead shell, I AM NOT RESPONSIBLE FOR ANY DAMAGE THIS DOES!!!)**
